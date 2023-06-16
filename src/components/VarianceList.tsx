@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Text, Image, Card } from "@chakra-ui/react";
+import { CircularProgress } from "@chakra-ui/react";
 import {
   Table,
   Thead,
@@ -104,7 +105,9 @@ function VarianceList() {
             </TableContainer>
           </Card>
         </>
-      ) : null}
+      ) : (
+        <CircularProgress isIndeterminate color="green.300" />
+      )}
     </Box>
   );
 }
