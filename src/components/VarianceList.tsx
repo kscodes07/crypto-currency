@@ -20,7 +20,7 @@ import { Search2Icon } from "@chakra-ui/icons";
 
 function VarianceList() {
   const [datas, setDatas] = useState<any>();
-  const [search, setSearch] = useState<any>();
+  const [search, setSearch] = useState<any>("");
 
   const getDatas = async () => {
     const details = {
@@ -106,7 +106,9 @@ function VarianceList() {
           </Card>
         </>
       ) : (
-        <CircularProgress isIndeterminate color="green.300" />
+        <Box ml={"50vh"} mt={"10"}>
+          <CircularProgress isIndeterminate color="green.300" />
+        </Box>
       )}
     </Box>
   );
